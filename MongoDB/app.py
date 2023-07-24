@@ -30,7 +30,7 @@ def find_by_tag(*args):
 
 
 def find_by_tags(*args):
-    quotes = Quote.objects(__raw__={*args})
+    quotes = Quote.objects(args)
     quotes_list = []
     for q in quotes:
         quotes_list.append(q.quote)
